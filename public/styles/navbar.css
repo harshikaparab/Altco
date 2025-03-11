@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+
+    
+}
+body{
+    background:#f09aa9;
+}
+.header{
+    background-color:#3b0016;
+    color: #f09aa9;
+    display: flex;
+    position: absolute;
+   
+    width: 100%;
+    height: 7%;
+    justify-content: space-around;
+}
+
+.header div{
+    margin-top: 0.5%;
+    font-size: 25px;
+}
+
+.header img{
+    height: 60%;
+    width: 2%;
+    margin: 0.5%;
+}
+
+
+
+.navbar .homebutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 6.5%;
+    width: 3.5%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:9%;
+    left: 77%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .homebutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+
+.navbar .loginbutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 7%;
+    width: 4%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:9%;
+    left: 82%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .loginbutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+.navbar .logo{
+    z-index: 50;
+    position: fixed;
+    top:7%;
+    left: 2%;
+    height: 12%;
+    width:6%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+     
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+.navbar .wheel{
+    z-index: 50;
+    position: fixed;
+    top:8%;
+    left: 93%;
+    height: 8%;
+    width:4%;
+    transition: transform 0.9s ease;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+}
+
+.navbar .wheel:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+.navbar .wheel:active {
+    transform: rotate(180deg); /* Rotates the button by 45 degrees when clicked */
+}
+
+.navbar .shoppingbag{
+    z-index: 50;
+    position: fixed;
+    top:9%;
+    left: 88%;
+    height: 5.5%;
+    width:3%;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+
+}
+.navbar .shoppingbag:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+
+
+
+
+
+
+.marquee {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.marquee-content {
+    display: flex;
+    width: 200%; /* Make sure this is 2 times the number of boxes */
+    animation: marquee 15s linear infinite;
+}
+
+.box {
+    flex: none;
+    width: calc(100% / 12); /* Make sure this divides into 200% evenly */
+    height: 30vh;
+    margin: 0;
+    background-color: #3b0016;
+    display: flex;
+    gap: none;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.mainlogo{
+    z-index: 2;
+    position:absolute;
+    
+    left:3%;
+    height: 88%;
+    width:43%;
+    
+
+}
+
+.f1text1{
+    color: #3b0016;
+    z-index: 2;
+    position:absolute;
+    font-size: 60%;
+    font-size: 95px;
+    left:55%;
+    top: 18%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+.f1text2{
+    color: #3b0016;
+    z-index: 2;
+    position:absolute;
+    font-size: 95px;
+    top: 30%;
+    left:55%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+    
+}
+
+.f1text3{
+    color: #3b0016;
+    z-index: 2;
+    position:absolute;
+    font-size: 95px;
+    top: 42%;
+    left:55%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+    
+    
+}
+
+.f1text4{
+    color: #3b0016;
+    z-index: 2;
+    position:absolute;
+    font-size: 95px;
+    top: 54%;
+    left:55%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+    
+}
+
+
+
+.hoverable:hover {
+    transform: scale(1.2); /* Scales the text to 120% of its original size */
+}

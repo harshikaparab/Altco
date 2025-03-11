@@ -1,0 +1,573 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    
+
+    
+}
+body{
+    background:#f09aa9;
+}
+
+.header{
+    background-color: #3b0016;
+    color: #f09aa9;
+    display: flex;
+    position: absolute;
+   
+    width: 100%;
+    height: 7%;
+    justify-content: space-around;
+}
+
+.header div{
+    margin-top: 0.5%;
+    font-size: 25px;
+}
+
+.header img{
+    height: 60%;
+    width: 2%;
+    margin: 0.5%;
+}
+
+.navbar .logo{
+    z-index: 50;
+    position: fixed;
+    top:7%;
+    left: 2%;
+    height: 12%;
+    width:6%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+     
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+.navbar .logoutbutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 5%;
+    width: 5%;
+    border: 3px solid #3b0016;
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:10%;
+    left: 90%;
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .logoutbutton:hover {
+    transform: scale(1.1); /* This scales the button to 110% of its original size */
+    
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .createproductbtn{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 5%;
+    width: 10%;
+    border: 3px solid #3b0016;
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:10%;
+    left: 70%;
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .createproductbtn:hover {
+    transform: scale(1.1); /* This scales the button to 110% of its original size */
+    
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar .viewordersbtn{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 5%;
+    width: 8%;
+    border: 3px solid #3b0016;
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:10%;
+    left: 81%;
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .viewordersbtn:hover{
+    transform: scale(1.1); /* This scales the button to 110% of its original size */
+    
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.logincontainer{
+    height: 70%;
+    width: 60%;
+    /* background-color: black; */
+    z-index:2;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,225,0.1) ;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+
+.pt0{
+    font-size: 50px;
+    position:absolute;
+    left: 35%;
+}
+.pt1{
+    font-size: 25px;
+    position: absolute;
+    top: 16%;
+    left: 4%;
+}
+.pnameinput{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+
+    height: 8%;
+    width: 40%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pt2{
+    font-size: 25px;
+    position: absolute;
+    top: 26%;
+    left: 4%;
+}
+.pimageinput{
+    position: absolute;
+    top: 27%;
+    left: 20%;
+
+    
+}
+
+.pt3{
+    font-size: 25px;
+    position: absolute;
+    top: 36%;
+    left:4% ;
+}
+.ppriceinput{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pt4{
+    font-size: 25px;
+    position: absolute;
+    top: 47%;
+    left: 4%;
+}
+.pquantityinput{
+    position: absolute;
+    top: 46%;
+    left: 23%;
+
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pt5{
+    font-size: 25px;
+    position: absolute;
+    top: 69%;
+    left: 4%;
+}
+.pdiscriptioninput{
+    position: absolute;
+    top: 68%;
+    left: 26%;
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.line1{
+    position: absolute;
+    top: 68%;
+    left: 60%;
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.line2{
+    position: absolute;
+    top: 78%;
+    left: 26%;
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.line3{
+    position: absolute;
+    top: 78%;
+    left: 60%;
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pt6{
+    font-size: 25px;
+    position: absolute;
+    top: 58%;
+    left: 4%;
+}
+
+.ptypeinput{
+    position: absolute;
+    top: 57%;
+    left: 26%;
+
+    height: 8%;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 25px;
+    
+
+    background: transparent;
+    border: 2px solid #3b0016;
+    padding: 2%;
+
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pbutton{
+    position: absolute;
+    top: 90%;
+    left: 4%;
+
+    color: #f09aa9;
+    background: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 8%;
+    width: 20%;
+    border: 3px solid #3b0016;
+
+    z-index: 10;
+    text-align: center; 
+
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;  
+    cursor: pointer;
+}
+
+.pbutton:hover {
+    transform: scale(1.1); /* This scales the button to 110% of its original size */
+    
+   
+}
+
+
+
+.productlisting{
+    font-size: 50px;
+    position:absolute;
+    top: 100%;
+    left: 40%;
+   
+
+}
+
+.productscontainer{
+    
+    height: auto;
+    width: 60%;
+    position: absolute;
+    top: 115%;
+    left: 20%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* border:2px solid #000 ; */
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,225,0.1) ;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+    
+}
+
+.productscontainer .product{
+    border: 2px solid black ;
+    height: 65vh;
+    width: 18.5vw; 
+    margin: 1%;
+    padding: 1%;
+
+
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,225,0.1) ;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+    
+
+
+
+   
+
+}
+
+
+.productscontainer .product .image{
+    height: 65%;
+    width: 98%;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.productscontainer .product .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.fontstyling{
+    font-size: 15px;
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.productscontainer .product .editbutton{
+    height: 32px;
+    width: 60px;
+    font-size: 20px;
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    color: #3b0016;
+   
+    border: 3px solid #3b0016;
+    background:transparent;
+    
+    z-index: 10;
+   
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+}
+
+.productscontainer .product .deletebutton{
+    height: 32px;
+    width: 65px;
+    font-size: 20px;
+    position: absolute;
+    left: 70%;
+    top: 90%;
+
+    color: #3b0016;
+   
+    border: 3px solid #3b0016;
+    background:transparent;
+    
+    z-index: 10;
+   
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+}
+
+
+
+/* modal styling */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+    
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust to your liking */
+
+    
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

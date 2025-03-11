@@ -1,0 +1,639 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+
+    
+}
+
+
+.header{
+    background-color: #3b0016;
+    color: #f09aa9;
+    display: flex;
+    position: absolute;
+   
+    width: 100%;
+    height: 7%;
+    justify-content: space-around;
+}
+
+.header div{
+    margin-top: 0.5%;
+    font-size: 25px;
+}
+
+.header img{
+    height: 60%;
+    width: 2%;
+    margin: 0.5%;
+}
+
+
+.navbar .homebutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 6.5%;
+    width: 3.5%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:9%;
+    left: 77%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .homebutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+
+.navbar .loginbutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 7%;
+    width: 4%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:9%;
+    left: 82%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .loginbutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+.navbar .logo{
+    z-index: 50;
+    position: fixed;
+    top:7%;
+    left: 2%;
+    height: 12%;
+    width:6%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+     
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+.navbar .wheel{
+    z-index: 50;
+    position: fixed;
+    top:8%;
+    left: 93%;
+    height: 8%;
+    width:4%;
+    transition: transform 0.9s ease;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+}
+
+.navbar .wheel:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+.navbar .wheel:active {
+    transform: rotate(180deg); /* Rotates the button by 45 degrees when clicked */
+}
+
+.navbar .shoppingbag{
+    z-index: 50;
+    position: fixed;
+    top:9%;
+    left: 88%;
+    height: 5.5%;
+    width:3%;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+
+}
+.navbar .shoppingbag:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+
+
+
+
+.bgbox{
+    position: absolute;
+    top: 7%;
+    height: 52vh;
+    width: 100%;
+    background: #f09aa9;
+    z-index: 1;
+}
+.mainlogo{
+    z-index: 2;
+    position:absolute;
+    
+    left:3%;
+    height: 88%;
+    width:43%;
+
+}
+
+.f1text1{
+    color: #3b0016;
+    z-index: 2;
+    position:absolute;
+    font-size: 60%;
+    font-size: 95px;
+    left:50%;
+    top: 28%;
+}
+
+.f1text2{
+    color: #3b0016;
+    z-index: 2;
+    position:absolute;
+    font-size: 95px;
+    top: 38%;
+    left:50%;
+    
+}
+
+.yellowshine1{
+   z-index: 2;
+   position: absolute;
+   top: 22%;
+   left: 44%;
+   height: 12%;
+   width: 6%;
+
+}
+
+.yellowshine2{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 87%;
+    height: 12%;
+    width: 6%;
+     
+ }
+
+.marquee {
+    position: absolute;
+    top: 58%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.marquee-content {
+    display: flex;
+    width: 200%; /* Make sure this is 2 times the number of boxes */
+    animation: marquee 15s linear infinite;
+}
+
+.box {
+    flex: none;
+    width: calc(100% / 12); /* Make sure this divides into 200% evenly */
+    height: 30vh;
+    margin: 0;
+    background-color: #f09aa9;
+    display: flex;
+    gap: none;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.frame2 .f2img{
+    position: absolute;
+    z-index: -1;
+    top: 65%;
+    
+    width:105%;
+    height:105%;
+
+}
+
+
+.marquee2 {
+    position: absolute;
+    top: 150%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.marquee-content2 {
+    display: flex;
+    width: 200%; /* Make sure this is 2 times the number of boxes */
+    animation: marquee 15s linear infinite;
+}
+
+.m2box {
+    flex: none;
+    width: calc(100% / 12); /* Make sure this divides into 200% evenly */
+    height: 30vh;
+    margin: 0;
+    background-color: #3b0016;
+    display: flex;
+    gap: none;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.frame3 .bgbox2{
+    background-color: #3b0016;
+    
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 180%;
+    
+    z-index: 3;
+}
+
+.frame3 .f3text{
+    background:#3b0016;
+    color: #f09aa9;
+    position: absolute;
+    height: 25%;
+    width: 65%;
+    top: 179%;
+    left: 18%;
+    
+    z-index: 4;
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 170%;
+    text-align: center;
+      
+}
+
+.frame4 .flavour1{
+    height: 115%;
+    width: 100%;
+    z-index: -1;
+    background: #66229a;
+    position: absolute;
+    top: 210%;
+}
+
+.flavour1 .f4text{
+    z-index: 2;
+    color: #b26ee2;
+    font-size: 400px;
+    position:relative;
+    top:11%;
+    left:23%;
+}
+.flavour1{
+    overflow: hidden;
+}
+
+.flavour1 .f4button{
+    color: #b26ee2;
+    font-size: 30px;
+    height: 8%;
+    width: 10%;
+    border: 3px solid #b26ee2;
+    background:transparent;
+    position: relative;
+    left: 43%;
+    top:-47%;
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+}
+
+.flavour1 .f4button:hover {
+    transform: scale(1.1); 
+    
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flavour1 .f4img{
+    z-index: 3;
+    height: 65%;
+    width: 40%;
+    position: relative;
+    top:-53%;
+    left: 17%;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.9));
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+
+    cursor: pointer;
+}
+
+.flavour1 .f4img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+       
+}
+
+
+.marquee3 {
+    position: absolute;
+    top: 305%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.marquee-content3 {
+    display: flex;
+    width: 200%; /* Make sure this is 2 times the number of boxes */
+    animation: marquee 15s linear infinite;
+}
+
+.m3box {
+    flex: none;
+    width: calc(100% / 12); /* Make sure this divides into 200% evenly */
+    height: 30vh;
+    margin: 0;
+    background-color: #3b0016;
+    display: flex;
+    gap: none;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+}
+
+
+
+.box5{
+    background-color: #3b0016;
+    
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    top: 335%;
+    
+    z-index: 3;
+    
+}
+
+.bt5{
+    font-size: 170px;
+    color: #b26ee2;
+    position: absolute;
+    left: 24%;
+    top: -17%;
+}
+
+
+.marquee4 {
+    position: absolute;
+    top: 361%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.marquee-content4 {
+    display: flex;
+    width: 200%; /* Make sure this is 2 times the number of boxes */
+    animation: marquee 15s linear infinite;
+}
+
+.m4box {
+    flex: none;
+    width: calc(100% / 12); /* Make sure this divides into 200% evenly */
+    height: 30vh;
+    margin: 0;
+    background-color: #fbfbe4;
+    display: flex;
+    gap: none;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+}
+
+
+.box6{
+    height: 72vh;
+    width: 100vw;
+    background: #fbfbe4;
+    position: absolute;
+    top: 388%;
+}
+
+.hover:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+    
+    
+}
+
+
+.p1{
+    height: 80%;
+    width: 15%;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    cursor: pointer;
+}
+
+
+.p2{
+    height: 81%;
+    width: 34%;
+    position: absolute;
+    top: -1%;
+    left: 33%;
+    cursor: pointer;
+}
+
+
+.p3{
+    height: 81%;
+    width: 34%;
+    position: absolute;
+    top: -1%;
+    left: 65%;
+    cursor: pointer;
+}
+
+.p1t{
+    position: absolute;
+    top: 77%;
+    left: 13%;
+    font-size: large;
+}
+
+.p2t{
+    position: absolute;
+    top: 77%;
+    left: 46%;
+    font-size: large;
+}
+
+.p3t{
+    position: absolute;
+    top: 77%;
+    left: 78%;
+    font-size: large;
+}
+
+.p1d{
+    position: absolute;
+    top: 80%;
+    left: 14%;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.p2d{
+    position: absolute;
+    top: 80%;
+    left: 42.5%;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.p3d{
+    position: absolute;
+    top: 80%;
+    left: 77%;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+
+.marquee5 {
+    position: absolute;
+    top: 460%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    background: #fbfbe4;
+}
+
+.marquee-content5 {
+    display: flex;
+    width: 200%; /* Make sure this is 2 times the number of boxes */
+    animation: marquee 15s linear infinite;
+}
+
+.m5box {
+    flex: none;
+    width: calc(100% / 12); /* Make sure this divides into 200% evenly */
+    height: 30vh;
+    margin: 0;
+    background-color:#3b0016;
+    display: flex;
+    gap: none;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+}
+
+.avail{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 490%;
+    background: #3b0016;
+
+}
+
+.at{
+    position: absolute;
+    top: -5%;
+    left: 40%;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fbfbe4;
+}
+
+.imgcontainer{
+   
+    position: absolute;
+    top: 35%;
+    left: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.imgcontainer img{
+    height: 40%;
+    width: 17%;
+    z-index: 100;
+    cursor: pointer;
+
+}
+
+
+

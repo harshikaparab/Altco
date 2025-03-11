@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/productdetails.css">
+    <!-- Import the "New Amsterdam" font using @import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+        <img src="/logos/yellow shine.png">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+    </div>
+    <div class="navbar">
+        <img class="logo" src="/logos/Untitled design (1) (1).png" onclick="window.location.href='/';">
+        <img class="homebutton" src="/logos/icons8-home-96.png" onclick="window.location.href='/';">
+        <img class="loginbutton" src="/logos/icons8-name-96.png" onclick="window.location.href='/login';">
+        <img class="shoppingbag" src="/logos/icons8-shopping-bag-50.png"
+            onclick="window.location.href='/profile/cart';">
+        <img class="wheel" src="/logos/icons8-ship-wheel-96.png" onclick="window.location.href='/navbar';">
+    </div>
+
+    <div class="headtitle"></div>
+
+    <img class="productimage" src="<%= product.image %>" alt="">
+
+    <div class="productname">
+        <%= product.productname %>
+    </div>
+
+    <div class="discription">
+        <%= product.discription %>
+    </div>
+
+    <div class="line1">-  <%= product.line1 %>
+    </div>
+    <div class="line2">- <%= product.line2 %>
+    </div>
+    <div class="line3">- <%= product.line3 %>
+    </div>
+
+
+    <div class="price">Price : ₹ <%= product.price %>
+    </div>
+
+
+    <% if(product.quantity> 0) { %>
+        <!-- If product quantity is greater than 0, show the Add to Cart button -->
+        <form action="/profile/cart" method="POST">
+            <input type="hidden" name="id" value="<%= product._id %>">
+            <button class="cartbutton" type="submit">Add to Cart</button>
+        </form>
+        <% } else { %>
+            <!-- If product quantity is 0, disable the button and show out of stock message -->
+            <button class="outstock" type="button" disabled>Out of Stock</button>
+            <% } %>
+
+                
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    
+
+    
+}
+body{
+    background:#f09aa9;
+}
+
+.header{
+    background-color: #3b0016;
+    color: #f09aa9;
+    display: flex;
+    position: absolute;
+   
+    width: 100%;
+    height: 7%;
+    justify-content: space-around;
+}
+
+.header div{
+    margin-top: 0.5%;
+    font-size: 25px;
+}
+
+.header img{
+    height: 60%;
+    width: 2%;
+    margin: 0.5%;
+}
+
+
+.navbar .homebutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 6.5%;
+    width: 3.5%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 50;
+    text-align: center; 
+    top:9%;
+    left: 77%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .homebutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+
+.navbar .loginbutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 7%;
+    width: 4%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 50;
+    text-align: center; 
+    top:9%;
+    left: 82%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .loginbutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+.navbar .logo{
+    z-index: 50;
+    position: fixed;
+    top:7%;
+    left: 2%;
+    height: 12%;
+    width:6%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+     
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+.navbar .wheel{
+    z-index: 50;
+    position: fixed;
+    top:8%;
+    left: 93%;
+    height: 8%;
+    width:4%;
+    transition: transform 0.9s ease;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+}
+
+.navbar .wheel:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+.navbar .wheel:active {
+    transform: rotate(180deg); /* Rotates the button by 45 degrees when clicked */
+}
+
+.navbar .shoppingbag{
+    z-index: 50;
+    position: fixed;
+    top:9%;
+    left: 88%;
+    height: 5.5%;
+    width:3%;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+
+}
+.navbar .shoppingbag:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+
+.headtitle{
+    font-size: 50px;
+    position: absolute;
+    top: 9%;
+    left: 44%;
+}
+
+
+.productimage{
+    height: 60%;
+    width: 30%;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 20px;
+    position: absolute;
+    top: 25%;
+    left: 6%;
+}
+
+
+.productname{
+
+    font-size: 65px;
+    position: absolute;
+    
+    top: 25%;
+    left: 45%;
+
+}
+
+.discription{
+
+    font-size: 30px;
+    position: absolute;
+    
+    top: 35%;
+    left: 45%;
+
+}
+.line1{
+
+    font-size: 20px;
+    position: absolute;
+    
+    top: 42%;
+    left: 45%;
+
+}
+
+.line2{
+
+    font-size: 20px;
+    position: absolute;
+    
+    top: 46%;
+    left: 45%;
+
+}
+
+.line3{
+
+    font-size: 20px;
+    position: absolute;
+    
+    top: 50%;
+    left: 45%;
+
+}
+
+.price{
+
+    font-size: 30px;
+    position: absolute;
+    
+    top: 73%;
+    left: 45%;
+
+}
+
+
+.cartbutton{
+    height: 55px;
+    width: 140px;
+    font-size: 25px;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    color: #3b0016;
+   
+    border: 3px solid #3b0016;
+    background:transparent;
+    
+    z-index: 10;
+   
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+}
+
+
+.outstock{
+    height: 55px;
+    width: 140px;
+    font-size: 25px;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    color: grey;
+   
+    border: 3px solid grey;
+    background:transparent;
+    
+    z-index: 10;
+   
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+}
+
+.buybutton{
+    height: 55px;
+    width: 140px;
+    font-size: 25px;
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    color: #3b0016;
+   
+    border: 3px solid #3b0016;
+    background:transparent;
+    
+    z-index: 10;
+   
+    box-shadow: 0px 5px 10px rgba(0.6, 0.6, 0.6, 0.6);
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+}

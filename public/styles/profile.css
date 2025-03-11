@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    
+
+    
+}
+body{
+    background:#f09aa9;
+}
+
+.header{
+    background-color: #3b0016;
+    color: #f09aa9;
+    display: flex;
+    position: absolute;
+   
+    width: 100vw;
+    height: 7vh;
+    justify-content: space-around;
+}
+
+.header div{
+    margin-top: 0.5%;
+    font-size: 25px;
+}
+
+.header img{
+    height: 60%;
+    width: 2%;
+    margin: 0.5%;
+}
+
+
+
+.navbar .homebutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 6.5%;
+    width: 3.5%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:9%;
+    left: 77%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .homebutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+
+.navbar .loginbutton{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 6%;
+    width: 3.5%;
+    
+    background:transparent;
+    position: fixed;
+    z-index: 10;
+    text-align: center; 
+    top:9.2%;
+    left: 82%;
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;  
+    cursor: pointer;
+    
+}
+
+.navbar .loginbutton:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+.navbar .logo{
+    z-index: 50;
+    position: fixed;
+    top:7%;
+    left: 2%;
+    height: 12%;
+    width:6%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+     
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+.navbar .wheel{
+    z-index: 50;
+    position: fixed;
+    top:8%;
+    left: 93%;
+    height: 8%;
+    width:4%;
+    transition: transform 0.9s ease;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+}
+
+.navbar .wheel:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+.navbar .wheel:active {
+    transform: rotate(180deg); /* Rotates the button by 45 degrees when clicked */
+}
+
+.navbar .shoppingbag{
+    z-index: 50;
+    position: fixed;
+    top:9%;
+    left: 88%;
+    height: 5.5%;
+    width:3%;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+
+}
+.navbar .shoppingbag:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+       
+}
+
+
+.navbar .logo{
+    z-index: 50;
+    position: fixed;
+    top:7%;
+    left: 2%;
+    height: 12%;
+    width:6%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,  0.3s ease;
+     
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2); /* This scales the button to 110% of its original size */
+    
+    
+}
+
+
+
+
+.greetings .hello{
+    font-size: 30px;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    word-spacing: 10px;
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.greetings .welcome{
+    font-size: 30px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    word-spacing: 10px;
+
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+.maintitle{
+    font-size: 50px;
+    position: absolute;
+    left: 53%;
+    top: 30%;
+    
+
+}
+.oswald{
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.orderscontainer{
+    
+    /* border: 2px solid black; */
+    height: auto;
+    width: 63.5%;
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    padding: 1.5%;
+    margin-bottom: 5%;
+
+  
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,225,0.1) ;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    
+}
+
+.orderscontainer .order{
+    
+
+    border: 2px solid black;
+    padding: 2%;
+    padding-left: 3%;
+    
+
+    
+    height:auto;
+    width: 60vw;  
+    margin-bottom: 3%;
+
+
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,225,0.1) ;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+    
+
+}
+
+.titlecontainer{
+    color: #3b0016;
+    font-size: 20px;
+    padding: 0.2%;
+    height: 5vh;
+    width: 10vw;
+    border: 3px solid #3b0016;
+    background:transparent;
+   
+    margin-top: 4%;
+    text-align: center;
+    padding-top: 0.4% ;
+    
+    
+   
+    
+    border-radius: 25px;
+   
+    
+}
+
+.ordertitle{
+    
+   
+    margin-top: 0%;
+    
+   
+    
+}
+
+
+.shipmentstatus{
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    font-size: 20px;
+}
+
+
+
+
+
+.sidebar{
+    /* border:2px solid #000 ; */
+    position: fixed;
+    top:40%;
+    left: 5%;
+    height: 60%;
+    width: 20%;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    
+}
+
+
+
+.sidebar .sidebaritem{
+    font-size: 30px;
+    cursor: pointer;
+    
+    /* border:1px solid #000 ; */
+    height: 10%;
+
+    
+    text-align: center;
+    
+} 
+
+.sidebar .sidebaritem:focus{
+    transform: scale(1.4); 
+  }
+
+  .sidebar .filter{
+    font-size: 37px;
+    border: none;
+    height: 12%;
+    border-bottom: 1px solid #000;
+ }

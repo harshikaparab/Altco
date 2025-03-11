@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="/styles/adminlogin.css">
+    <!-- Import the "New Amsterdam" font using @import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+
+   
+
+</head>
+
+<body>
+    <% if(error.length>0){ %>
+        <div class="error">
+            <span class="errorcomponent">
+                <%= error %>
+            </span>
+        </div>
+        <% } %>
+        
+            <div class="header">
+                <div>Plant Based Protien</div>
+                <img src="/logos/yellow shine.png">
+                <div>Milk Alternatives</div>
+                <img src="/logos/yellow shine.png">
+                <div>Plant Based Protien</div>
+                <img src="/logos/yellow shine.png">
+                <div>Milk Alternatives</div>
+            </div>
+            <div class="navbar">
+                <div class="homebutton" onclick="window.location.href='/';">HOME</div>
+                <img class="mainlogo" src="/logos/Untitled design (1) (1).png">
+                <img class="logo" src="/logos/Untitled design (1) (1).png" onclick="window.location.href='/';">
+                <img class="wheel" src="/logos/icons8-ship-wheel-96.png" onclick="window.location.href='/navbar';">
+            </div>
+
+            <form class="logincontainer glass" action="/adminlogin" autocomplete="off" method="post">
+                <div class="lt1">ADMIN LOGIN</div>
+                <div class="lt2">username</div>
+                <input class="username" type="text" name="username" placeholder="Enter Username">
+                <div class="lt3">password</div>
+                <input class="password" id="myInput" type="password" name="password" placeholder="Enter Password">
+                
+                <div id="textb" onclick="myFunction()">show</div>
+               <script>
+                    function myFunction() {
+                        var x = document.getElementById("myInput");
+                        var y = document.getElementById("textb");
+                        if (x.type === "password") {
+                            x.type = "text";
+                            y.innerHTML = "hide"
+                        } else {
+                            x.type = "password";
+                            y.innerHTML = "show"
+                        }
+                    }
+                </script>
+
+                <button class="loginbutton" type="submit">LOGIN</button>
+                <div class="isadmin" onclick="window.location.href='/login';">USER LOGIN</div>
+
+
+
+
+            </form>
+
+
+            
+          
+
+
+
+
+</body>
+
+</html>

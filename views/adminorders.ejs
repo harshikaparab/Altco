@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/adminorders.css">
+    <!-- Import the "New Amsterdam" font using @import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+
+
+     
+</head>
+
+<body>
+    <div class="header">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+        <img src="/logos/yellow shine.png">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+    </div>
+    <div class="navbar">
+        <div class="createproductbtn" onclick="window.location.href='/adminlogin/adminprofile';">CREATE PRODUCT</div>
+        <div class="viewordersbtn" onclick="window.location.href='/adminlogin/vieworders';">view orders</div>
+        <div class="logoutbutton" onclick="window.location.href='/logout';">logout</div>
+        
+        <img class="logo" src="/logos/Untitled design (1) (1).png" onclick="window.location.href='/';">
+       
+    </div>
+
+
+        <div class="pt0">All Orders</div>
+
+        <div class="sidebar">
+            <div class="sidebaritem filter" tabindex="0" onclick="window.location.href='/adminlogin/vieworders'" >All ORDERS</div>
+            <div class="sidebaritem" tabindex="0" onclick="window.location.href='/adminlogin/vieworders?type=Processing'">Processing</div>
+            <div class="sidebaritem" tabindex="0" onclick="window.location.href='/adminlogin/vieworders?type=Shipped'">shipped</div>
+            <div class="sidebaritem" tabindex="0" onclick="window.location.href='/adminlogin/vieworders?type=Delivered'">delivered</div>
+        </div>
+
+        <div class="orderscontainer">
+            <% orders.slice().reverse().forEach(function(order) { %>
+                <div class="order">
+                    <div class="titlecontainer ordertitle">ORDER DETAILS</div>
+                    <div class="orderid oswald">Order ID: <%= order._id %></div>
+                    <div class="orderdate oswald">Order Date: <%= order.orderDate.toLocaleDateString() %></div>
+                    <div class="ordertime oswald">Order Time: <%= order.orderDate.toLocaleTimeString() %></div>
+    
+                    <div class="products oswald">
+                        <div class="titlecontainer">PRODUCT DETAILS</div>
+                        <div class="product oswald">
+                            <% order.products.forEach(function(product) { %>
+                                <div class="oswald">
+                                    <p class="oswald">Product Name: <%= product.productname %></p>
+                                    <p class="oswald">Price: <%= product.price %></p>
+                                    <p class="oswald">Quantity: <%= product.quantity %></p>
+                                </div>
+                                -----------------------------------------
+                            <% }) %>
+                        </div>
+                    </div>
+    
+                    <div class="titlecontainer">CUSTOMER DETAILS</div>
+                    <div class="email oswald">Customer Email: <%= order.email %></div>
+                    <div class="address oswald">
+                        Address: 
+                        <%= order.address ? 
+                            `${order.address.city || 'N/A'}, ${order.address.country || 'N/A'}, ${order.address.line1 || 'N/A'}, ${order.address.line2 || 'N/A'}, ${order.address.postal_code || 'N/A'}, ${order.address.state || 'N/A'}` : 
+                            'Address not provided' 
+                        %>
+                    </div>
+    
+                    <div class="orderstatus oswald">Payment Status: <%= order.orderstatus %></div>
+                    <div class="shipstatus oswald">Shipment Status: <%= order.shipmentstatus %></div>
+
+
+                    <div class="formconatiner">
+                        
+                        <form class="oswald" action="/adminlogin/updateshipmentStatus/<%= order._id %>" method="POST">
+                            <label class="oswald" for="shipmentstatus">Update Shipment Status:</label>
+    
+                            <select class="shipmentinput" name="type" aria-placeholder="select option">
+                                <option value="" disabled selected>Select Status</option>
+                                <option value="Processing">Processing</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                                
+                            </select>
+                        
+                            <button type="submit" class="update-btn">Update</button>
+                        </form>
+
+                    </div>
+                   
+                </div>
+
+                
+               
+            
+            <% }) %>
+        </div>
+        
+
+        
+   
+    
+    
+
+
+
+
+  
+</body>
+
+</html>

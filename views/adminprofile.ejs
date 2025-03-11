@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/adminprofile.css">
+    <!-- Import the "New Amsterdam" font using @import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+
+
+     
+</head>
+
+<body>
+    <div class="header">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+        <img src="/logos/yellow shine.png">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+    </div>
+    <div class="navbar">
+        <div class="createproductbtn" onclick="window.location.href='/adminlogin/adminprofile';">CREATE PRODUCT</div>
+        <div class="viewordersbtn" onclick="window.location.href='/adminlogin/vieworders';">view orders</div>
+        <div class="logoutbutton" onclick="window.location.href='/logout';">logout</div>
+        
+        <img class="logo" src="/logos/Untitled design (1) (1).png" onclick="window.location.href='/';">
+       
+    </div>
+
+    <form class="logincontainer glass" action="/adminlogin/adminprofile" autocomplete="off" enctype="multipart/form-data" method="post" >
+        <!--  -->
+        <div class="pt0">Create Product</div>
+
+        <div class="pt1">Product Name : </div>
+        <input class="pnameinput" type="text" placeholder="Enter Product Name" name="productname">
+        
+        <div class="pt2">Upload Image : </div>
+        <input class="pimageinput" type="file" placeholder="Select File" name="image">
+
+        <div class="pt3">Product Cost : </div>
+        <input class="ppriceinput" type="number" placeholder="Enter Product Cost" name="price">
+
+        <div class="pt4">Product Quantity : </div>
+        <input class="pquantityinput" type="number" placeholder="Enter Product Quantity" name="quantity">
+
+        <div class="pt5">Product Description : </div>
+        <input class="pdiscriptioninput" type="text" placeholder="Enter Product Description" name="discription"> 
+        <input class="line1" type="text" placeholder="line1" name="line1"> 
+        <input class="line2" type="text" placeholder="line2" name="line2"> 
+        <input class="line3" type="text" placeholder="line3" name="line3"> 
+
+        <div class="pt6">Product Type: </div>
+        <select class="ptypeinput" name="type" aria-placeholder="select option">
+            <option value="" disabled selected>Select Product Type</option>
+            <option value="oat-milk">Oat Milk</option>
+            <option value="almond-milk">Almond Milk</option>
+            <option value="alt-milk">Alt Milk</option>
+            <option value="alt-protein">Alt Protein</option>
+            <option value="plant-delight">Plant Delight</option>
+        </select>
+
+        <button class="pbutton" type="submit">CREATE PRODUCT</button>
+
+    </form>
+
+    <div class="productlisting"> 
+        <div class="title">PRODUCT LISTING</div>
+    </div>
+
+    <div class="productscontainer">
+        <% products.forEach(function(product){ %>
+            <div class="product">
+                <div class="image">
+                    <img src="<%= product.image %>">
+                </div>
+                <div class="name fontstyling"> Name: <%= product.productname %></div>
+                <div class="price fontstyling">Price : ₹ <%= product.price %></div>
+                <div class="quantity fontstyling">Quantity : <%= product.quantity %></div>
+                <div class="discription fontstyling"><%= product.discription %></div>
+                <div class="type fontstyling">Type : <%= product.type %></div>
+
+
+                <button class="editbutton" type="button" onclick="openEditModal('<%= product._id %>')">Edit</button>
+
+
+                <form action="/adminlogin/deleteproduct" method="POST">
+                    <input type="hidden" name="id" value="<%= product._id %>">
+                    <button class="deletebutton" type="submit">Delete</button>
+                </form>
+   
+            </div>
+
+
+            <div id="editModal-<%= product._id %>" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeEditModal('<%= product._id %>')">&times;</span>
+                    <h2>Edit Product</h2>
+                    <form action="/adminlogin/editproduct/<%= product._id %>" method="POST">
+                        <label for="productname">Product Name:</label>
+                        <input class="oswald" type="text" id="productname" name="productname" value="<%= product.productname %>" required>
+    
+                        <label for="price">Price:</label>
+                        <input class="oswald" type="number" id="price" name="price" value="<%= product.price %>" required>
+    
+                        <label for="quantity">Quantity:</label>
+                        <input class="oswald" type="number" id="quantity" name="quantity" value="<%= product.quantity %>" required>
+    
+                        <label for="description">Description:</label>
+                        <textarea class="oswald" id="description" name="description" required><%= product.discription %></textarea>
+
+                        <label for="line1">line1:</label>
+                        <textarea class="oswald" id="description" name="description" required><%= product.line1 %></textarea>
+
+                        <label for="line2">line2:</label>
+                        <textarea class="oswald" id="description" name="description" required><%= product.line2 %></textarea>
+
+                        <label for="line3">line3:</label>
+                        <textarea class="oswald" id="description" name="description" required><%= product.line3 %></textarea>
+    
+                        <button type="submit">Update Product</button>
+                    </form>
+                </div>
+            </div>
+
+
+        <% }) %> 
+        
+
+    </div>
+    
+    <script>
+        // Function to open the modal
+        function openEditModal(productId) {
+            var modal = document.getElementById('editModal-' + productId);
+            modal.style.display = 'block';
+        }
+    
+        // Function to close the modal
+        function closeEditModal(productId) {
+            var modal = document.getElementById('editModal-' + productId);
+            modal.style.display = 'none';
+        }
+    
+        // Close the modal if the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+
+
+
+  
+</body>
+
+</html>

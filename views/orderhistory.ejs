@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/profile.css">
+    <!-- Import the "New Amsterdam" font using @import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+     
+</head>
+
+<body>
+    <div class="header">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+        <img src="/logos/yellow shine.png">
+        <div>Plant Based Protien</div>
+        <img src="/logos/yellow shine.png">
+        <div>Milk Alternatives</div>
+    </div>
+
+    <div class="navbar">
+        <img class="logo" src="/logos/Untitled design (1) (1).png" onclick="window.location.href='/';">
+        <img class="homebutton" src="/logos/icons8-home-96.png" onclick="window.location.href='/';">
+        <img class="loginbutton" src="/logos/icons8-logout-52.png" onclick="window.location.href='/logout';">
+        <img class="shoppingbag" src="/logos/icons8-shopping-bag-50.png" onclick="window.location.href='/profile/cart';">
+        <img class="wheel" src="/logos/icons8-ship-wheel-96.png"  onclick="window.location.href='/navbar';">
+    </div>
+
+
+    <div class="greetings">
+        <div class="hello">Hello! <%= user.username %> </div>
+        <div class="welcome">Welcome to ALT.CO</div>
+    </div>
+    
+    <div class="sidebar">
+        <div class="sidebaritem filter" tabindex="0" onclick="window.location.href='/profile'" >My ORDERS</div>
+        <div class="sidebaritem" tabindex="0" onclick="window.location.href='/profile/orderhistory'">order history</div>
+       
+        
+    </div>
+
+    <div class="maintitle">ORDER HISTORY</div>
+    
+
+    <div class="orderscontainer">
+        <% deliveredOrders.slice().reverse().forEach(function(order) { %>
+            
+            <div class="order">
+                <div class="titlecontainer ordertitle">ORDER DETAILS</div>
+                <div class="orderid oswald">Order ID: <%= order._id %></div>
+                <div class="orderdate oswald">Order Date: <%= order.orderDate.toLocaleDateString() %></div>
+                <div class="ordertime oswald">Order Time: <%= order.orderDate.toLocaleTimeString() %></div>
+                
+                <div class="products oswald">
+                    <div class="titlecontainer">PRODUCTS DETAILS</div>
+                    <div class="product oswald">
+                        <% order.products.forEach(function(product) { %>
+                            <div class="oswald">
+                                <p class="oswald">Product Name: <%= product.productname %></p>
+                                <p class="oswald">Price: <%= product.price %></p>
+                                <p class="oswald">Quantity: <%= product.quantity %></p>
+                            </div>
+                            -----------------------------------------
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="titlecontainer">CUSTOMER DETAILS</div>
+                <div class="email oswald">Customer Email: <%= order.email %></div>
+                <div class="address oswald">
+                    Address: 
+                    <%= order.address ? 
+                        `${order.address.city || 'N/A'}, ${order.address.country || 'N/A'},${order.address.line1 || 'N/A'}, ${order.address.line2 || 'N/A'}, ${order.address.postal_code || 'N/A'},${order.address.state || 'N/A'}` : 
+                        'Address not provided' 
+                    %>
+                </div>
+                <div class="orderstatus oswald">Payment Status: <%= order.orderstatus %></div>
+                
+                <div class="shipmentstatus oswald">Shipment Status: <%= order.shipmentstatus %></div>
+            </div>
+        <% }) %>
+    </div>
+    
+
+
+
+
+  
+</body>
+
+</html>
